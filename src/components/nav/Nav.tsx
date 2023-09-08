@@ -1,9 +1,11 @@
 import { BsSun } from 'react-icons/bs';
 
+import './nav.css';
+
 const Nav = () => {
   return (
-    <div className='flex justify-center '>
-      <h2 className='decoration-gray-300'>TODO APP</h2>
+    <div className='nav-cnt'>
+      <h2 className=''>TODO APP</h2>
       <button>
         <BsSun />
       </button>
