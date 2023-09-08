@@ -1,10 +1,8 @@
 import Nav from '../../components/nav/Nav';
 
-import './landingStyle.css';
-
 const LandingPage = () => {
   return (
-    <div className='landingPage-cnt'>
+    <div className='flex justify-center py-2'>
       <Nav />
     </div>
   );

@@ -1,17 +1,15 @@
 import { BsSun } from 'react-icons/bs';
 import desktopDark from '../../assets/desktopDark.jpg';
 
-import './nav.css';
-
 const Nav = () => {
   return (
-    <div className='nav-cnt'>
-      <div className='navImg-cnt'>
-        <img className='dark-img' src={desktopDark} alt='dark theme' />
+    <div className=''>
+      <div className=''>
+        <img className='' src={desktopDark} alt='dark theme' />
       </div>
-      <div className='nav-txtBtn-cnt'>
+      <div className=''>
         {' '}
-        <h2 className='nav-hd'>TODO APP</h2>
+        <h2 className=''>TODO APP</h2>
         <button>
           <BsSun />
         </button>
