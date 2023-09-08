@@ -1,4 +1,9 @@
 .nav-cnt {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+}
+
+.nav-hd {
+  color: black;
 }
