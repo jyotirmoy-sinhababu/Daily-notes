@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <div className='relative'>
       <div className=''>
-        <img className='' src={desktopDark} alt='dark theme' />
+        <img className='rounded-lg' src={desktopDark} alt='dark theme' />
       </div>
       <div className='flex justify-around absolute w-full top-16 '>
         {' '}
@@ -16,7 +16,7 @@ const Nav = () => {
           <BsSun />
         </button>
       </div>
-      <div>
+      <div className='absolute w-full top-40'>
         <InputForm />
       </div>
     </div>
