@@ -2,8 +2,8 @@ import { BsSun } from 'react-icons/bs';
 
 const Nav = () => {
   return (
-    <div>
-      <h2>TODO APP</h2>
+    <div className='flex'>
+      <h2 className='decoration-gray-300'>TODO APP</h2>
       <button>
         <BsSun />
       </button>
