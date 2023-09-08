@@ -3,9 +3,9 @@ import Nav from '../../components/nav/Nav';
 
 const LandingPage = () => {
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center '>
       <div>
-        <img className='darkImg' src={desktopDark} alt='dark theme' />
+        <img className='w-96' src={desktopDark} alt='dark theme' />
         <Nav />
       </div>
     </div>
