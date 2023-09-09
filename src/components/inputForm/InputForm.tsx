@@ -36,6 +36,7 @@ const InputForm = () => {
     >
       <input
         type='text'
+        name='dailyTodo'
         className='w-[580px] h-12 rounded-lg pl-4'
         placeholder='Create a new todo...'
         onChange={(e) => {
