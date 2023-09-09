@@ -1,15 +1,20 @@
-import { FiSearch } from 'react-icons/fi';
+import { BsPencilSquare } from 'react-icons/bs';
 
 const InputForm = () => {
   return (
-    <form className='flex justify-center'>
+    <form
+      onSubmit={(e: React.FormEvent) => {
+        e.preventDefault();
+      }}
+      className='flex justify-center'
+    >
       <input
         type='text'
         className='w-[580px] h-12 rounded-lg pl-4'
         placeholder='Create a new todo...'
       />
-      <button>
-        <FiSearch />
+      <button type='submit' className='flex text-stone-200 text-5xl'>
+        <BsPencilSquare />
       </button>
     </form>
   );
