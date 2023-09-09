@@ -1,9 +1,15 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { deleteTodo } from '../slice/TodoSlice';
 
 import { AiOutlineClose } from 'react-icons/ai';
 
 const TodoListDisplay = () => {
   const todos = useSelector((state: any) => state?.todo.todos);
+  const dispatch = useDispatch();
+
+  const handleDelete = (id: number) => {
+    dispatch(deleteTodo(id));
+  };
 
   return (
     <div className='flex gap-[53px] flex-wrap'>
@@ -15,7 +21,12 @@ const TodoListDisplay = () => {
               key={item.id}
             >
               <div className='flex justify-end'>
-                <button>
+                <button
+                  type='button'
+                  onClick={() => {
+                    handleDelete(item.id);
+                  }}
+                >
                   <AiOutlineClose />
                 </button>
               </div>
