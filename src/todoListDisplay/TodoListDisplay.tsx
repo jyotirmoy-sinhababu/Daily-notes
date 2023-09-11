@@ -8,8 +8,6 @@ import { AiOutlineClose } from 'react-icons/ai';
 import ErrorPage from '../components/errorPage/ErrorPage';
 
 const TodoListDisplay = () => {
-  const [completedTask, setCompletedTask] = useState();
-
   const todos = useSelector((state: any) => state?.todo.todos);
   const dispatch = useDispatch();
 

@@ -21,7 +21,7 @@ const InputForm = () => {
     setInputData({});
   };
 
-  console.log(todos);
+  // console.log(todos);
 
   const idGenerator = () => {
     return Math.floor(Math.random() * 100000) + 1;
