@@ -57,7 +57,7 @@ const TodoListDisplay = () => {
           );
         })
       ) : (
-        <div className='flex justify-center align-middle'>
+        <div className='flex'>
           <ErrorPage />
         </div>
       )}

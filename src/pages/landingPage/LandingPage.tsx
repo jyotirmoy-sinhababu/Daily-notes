@@ -8,7 +8,7 @@ const LandingPage = () => {
       <div className='flex justify-center py-4 '>
         <Nav />
       </div>
-      <div className='flex  p-12 '>
+      <div className='flex justify-center align-middle p-12 '>
         <TodoListDisplay />
       </div>
     </>
