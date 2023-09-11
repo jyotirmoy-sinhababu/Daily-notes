@@ -19,7 +19,7 @@ const TodoListDisplay = () => {
   console.log(isCompleted);
   return (
     <div className='flex gap-[53px] flex-wrap'>
-      {todos ? (
+      {todos.length ? (
         todos?.map((item: any) => {
           return (
             <div
@@ -57,7 +57,7 @@ const TodoListDisplay = () => {
           );
         })
       ) : (
-        <div className='flex justify-center'>
+        <div className='flex justify-center align-middle'>
           <ErrorPage />
         </div>
       )}

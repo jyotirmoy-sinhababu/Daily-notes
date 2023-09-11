@@ -1,7 +1,7 @@
 const ErrorPage = () => {
   return (
-    <div>
-      <p className='font-black decoration-slate-950 text-4xl'>No data found</p>
+    <div className='flex justify-center border-slate-300'>
+      <p className='font-black decoration-slate-950 text-4xl'>List is empty</p>
     </div>
   );
 };
