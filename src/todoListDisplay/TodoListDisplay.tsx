@@ -9,6 +9,7 @@ import ErrorPage from '../components/errorPage/ErrorPage';
 
 const TodoListDisplay = () => {
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
+  const [completedData, setCompletedData] = useState<[]>([]);
 
   const todos = useSelector((state: any) => state?.todo.todos);
   const dispatch = useDispatch();
@@ -16,7 +17,20 @@ const TodoListDisplay = () => {
   const handleDelete = (id: number) => {
     dispatch(deleteTodo(id));
   };
-  console.log(isCompleted);
+
+  // console.log(isCompleted);
+
+  const taskCompleted = () => {
+    const filteredData = todos.filter((item: object) => {
+      if ((item.completed as string) == 'true') {
+        return true;
+      }
+      return false;
+    });
+    setCompletedData([...completedData, filteredData]);
+  };
+  console.log(completedData);
+
   return (
     <div className='flex gap-[53px] flex-wrap'>
       {todos.length ? (
@@ -35,6 +49,7 @@ const TodoListDisplay = () => {
                       !isCompleted
                         ? setIsCompleted(true)
                         : setIsCompleted(false);
+                      taskCompleted();
                     }}
                   />
                   <label>Mark as completed</label>
