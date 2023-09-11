@@ -1,8 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteTodo, addTodo } from '../slice/TodoSlice';
 
-import { useState } from 'react';
-
 import { AiOutlineClose } from 'react-icons/ai';
 
 import ErrorPage from '../components/errorPage/ErrorPage';
@@ -14,8 +12,6 @@ const TodoListDisplay = () => {
   const handleDelete = (id: number) => {
     dispatch(deleteTodo(id));
   };
-
-  const checkCompleted = (id: number) => {};
 
   return (
     <div className='flex gap-[53px] flex-wrap'>
