@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteTodo } from '../slice/TodoSlice';
+import { deleteTodo, addTodo } from '../slice/TodoSlice';
 
 import { useState } from 'react';
 
@@ -8,8 +8,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import ErrorPage from '../components/errorPage/ErrorPage';
 
 const TodoListDisplay = () => {
-  const [isCompleted, setIsCompleted] = useState<boolean>(false);
-  const [completedData, setCompletedData] = useState<[]>([]);
+  const [completedTask, setCompletedTask] = useState();
 
   const todos = useSelector((state: any) => state?.todo.todos);
   const dispatch = useDispatch();
@@ -18,18 +17,7 @@ const TodoListDisplay = () => {
     dispatch(deleteTodo(id));
   };
 
-  // console.log(isCompleted);
-
-  const taskCompleted = () => {
-    const filteredData = todos.filter((item: object) => {
-      if ((item.completed as string) == 'true') {
-        return true;
-      }
-      return false;
-    });
-    setCompletedData([...completedData, filteredData]);
-  };
-  console.log(completedData);
+  const checkCompleted = (id: number) => {};
 
   return (
     <div className='flex gap-[53px] flex-wrap'>
@@ -45,12 +33,16 @@ const TodoListDisplay = () => {
                   <input
                     type='checkbox'
                     name='completed'
-                    onChange={() => {
-                      !isCompleted
-                        ? setIsCompleted(true)
-                        : setIsCompleted(false);
-                      taskCompleted();
-                    }}
+                    onChange={() =>
+                      dispatch(
+                        addTodo([
+                          ...todos?.filter(
+                            (todo: any) => todo?.id !== item?.id
+                          ),
+                          { ...item, isCompleted: !item.isCompleted },
+                        ])
+                      )
+                    }
                   />
                   <label>Mark as completed</label>
                 </div>

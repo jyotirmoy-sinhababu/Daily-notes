@@ -15,6 +15,7 @@ const InputForm = () => {
     const todoWithId = {
       ...inputData,
       id: idGenerator(),
+      isCompleted: false,
     };
     dispatch(addTodo([...todos, todoWithId]));
     setInputData({});
