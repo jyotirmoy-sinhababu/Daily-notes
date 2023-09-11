@@ -27,6 +27,7 @@ const TodoListDisplay = () => {
                   <input
                     type='checkbox'
                     name='completed'
+                    checked={item.isCompleted == true}
                     onChange={() =>
                       dispatch(
                         addTodo([

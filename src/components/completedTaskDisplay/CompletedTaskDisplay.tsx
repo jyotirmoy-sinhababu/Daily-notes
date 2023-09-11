@@ -39,6 +39,7 @@ const CompletedTaskDisplay = () => {
                   <input
                     type='checkbox'
                     name='completed'
+                    checked={item.isCompleted == true}
                     onChange={() =>
                       dispatch(
                         addTodo([
