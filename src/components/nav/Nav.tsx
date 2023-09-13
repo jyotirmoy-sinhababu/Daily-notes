@@ -1,4 +1,4 @@
-import { BsSun } from 'react-icons/bs';
+import { BsMoonStars } from 'react-icons/bs';
 
 import desktopDark from '../../assets/desktopDark.jpg';
 import InputForm from '../inputForm/InputForm';
@@ -13,7 +13,7 @@ const Nav = () => {
         {' '}
         <h2 className='font-black text-stone-200 text-2xl'>TODO APP</h2>
         <button className='text-stone-200 text-2xl'>
-          <BsSun />
+          <BsMoonStars />
         </button>
       </div>
       <div className='absolute w-full top-40'>
