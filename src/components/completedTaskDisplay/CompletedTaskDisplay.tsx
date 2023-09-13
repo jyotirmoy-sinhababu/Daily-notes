@@ -7,7 +7,7 @@ import { deleteTodo, addTodo } from '../../slice/TodoSlice';
 
 import ErrorPage from '../errorPage/ErrorPage';
 
-const CompletedTaskDisplay = ({ togglePage }: any) => {
+const CompletedTaskDisplay = () => {
   const [completedTask, setCompletedTask] = useState<any>();
 
   const todos = useSelector((state: any) => state?.todo.todos);

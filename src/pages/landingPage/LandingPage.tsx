@@ -13,13 +13,9 @@ const LandingPage = () => {
       <div className='flex justify-center py-4 '>
         <Nav />
       </div>
-      <FilterBarComp setTogglePage={setTogglePage} />
+      <FilterBarComp setTogglePage={setTogglePage} togglePage={togglePage} />
       <div className='flex justify-center align-middle p-12 '>
-        {togglePage ? (
-          <TodoListDisplay togglePage={togglePage} />
-        ) : (
-          <CompletedTaskDisplay togglePage={togglePage} />
-        )}
+        {togglePage ? <TodoListDisplay /> : <CompletedTaskDisplay />}
       </div>
     </>
   );
