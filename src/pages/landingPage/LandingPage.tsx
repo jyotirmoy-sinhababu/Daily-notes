@@ -6,16 +6,20 @@ import TodoListDisplay from '../../todoListDisplay/TodoListDisplay';
 import { useState } from 'react';
 
 const LandingPage = () => {
-  const [isMarked, setIsMarked] = useState<boolean>(true);
+  const [togglePage, setTogglePage] = useState<boolean>(true);
   return (
     <>
       {' '}
       <div className='flex justify-center py-4 '>
         <Nav />
       </div>
-      <FilterBarComp setIsMarked={setIsMarked} />
+      <FilterBarComp setTogglePage={setTogglePage} />
       <div className='flex justify-center align-middle p-12 '>
-        {isMarked ? <TodoListDisplay /> : <CompletedTaskDisplay />}
+        {togglePage ? (
+          <TodoListDisplay togglePage={togglePage} />
+        ) : (
+          <CompletedTaskDisplay togglePage={togglePage} />
+        )}
       </div>
     </>
   );

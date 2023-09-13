@@ -5,7 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 
 import ErrorPage from '../components/errorPage/ErrorPage';
 
-const TodoListDisplay = () => {
+const TodoListDisplay = ({ togglePage }: any) => {
   const todos = useSelector((state: any) => state?.todo.todos);
   const dispatch = useDispatch();
 

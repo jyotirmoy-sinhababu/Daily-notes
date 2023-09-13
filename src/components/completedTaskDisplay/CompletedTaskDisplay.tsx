@@ -7,7 +7,7 @@ import { deleteTodo, addTodo } from '../../slice/TodoSlice';
 
 import ErrorPage from '../errorPage/ErrorPage';
 
-const CompletedTaskDisplay = () => {
+const CompletedTaskDisplay = ({ togglePage }: any) => {
   const [completedTask, setCompletedTask] = useState<any>();
 
   const todos = useSelector((state: any) => state?.todo.todos);
@@ -26,12 +26,12 @@ const CompletedTaskDisplay = () => {
   };
 
   return (
-    <div>
+    <div className='flex gap-[53px] flex-wrap'>
       {completedTask?.length ? (
         completedTask.map((item: any) => {
           return (
             <div
-              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2 bg-slate-700 overflow-auto '
+              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2 bg-slate-500 overflow-auto '
               key={item.id}
             >
               <div className='flex justify-between'>
