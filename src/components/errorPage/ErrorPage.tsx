@@ -9,12 +9,12 @@ const ErrorPage = () => {
     },
   };
   return (
-    <div className='flex justify-center align-middle'>
+    <div className='flex pt-[40px] justify-center align-middle'>
       <p
         style={textTheme.textColor}
-        className='font-black decoration-slate-950 text-4xl'
+        className='font-black decoration-slate-950 text-3xl'
       >
-        List is empty
+        No items
       </p>
     </div>
   );

@@ -22,7 +22,7 @@ const FilterBarComp = ({ togglePage, setTogglePage }: any) => {
     <div className='flex gap-[28px] justify-end pe-[45px] '>
       <button
         style={(activeBtnStyle.active, btnTheme.btnColor)}
-        className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg'
+        className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg w-[80px] focus:border-teal-500'
         onClick={() => {
           setTogglePage(true);
         }}
@@ -31,7 +31,7 @@ const FilterBarComp = ({ togglePage, setTogglePage }: any) => {
       </button>
       <button
         style={(activeBtnStyle.inActive, btnTheme.btnColor)}
-        className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg'
+        className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg  focus:border-teal-500'
         onClick={() => {
           setTogglePage(false);
         }}
