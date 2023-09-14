@@ -31,7 +31,7 @@ const TodoListDisplay = () => {
           return (
             <div
               style={cardTheme.backGroundColor}
-              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2  overflow-auto '
+              className='border-4 w-[320px] h-[115px] rounded-lg px-2 py-2  overflow-auto flex gap-2 flex-col '
               key={item.id}
             >
               <div className='flex justify-between'>
@@ -51,13 +51,14 @@ const TodoListDisplay = () => {
                       )
                     }
                   />
-                  <label style={cardTheme.textColor}>Mark as completed</label>
+                  <label style={cardTheme.textColor}>Completed</label>
                 </div>
                 <button
                   type='button'
                   onClick={() => {
                     handleDelete(item.id);
                   }}
+                  className='text-red-800 font-semibold'
                 >
                   <AiOutlineClose />
                 </button>
@@ -65,7 +66,7 @@ const TodoListDisplay = () => {
               <div>
                 <p
                   style={cardTheme.textColor}
-                  className=' flex flex-wrap font-semibold '
+                  className=' flex flex-wrap font-semibold text-red-100  '
                 >
                   {item.dailyTodo}
                 </p>

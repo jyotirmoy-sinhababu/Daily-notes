@@ -31,7 +31,7 @@ const CompletedTaskDisplay = () => {
         completedTask.map((item: any) => {
           return (
             <div
-              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2 bg-slate-500 overflow-auto '
+              className='border-4 w-[320px] h-[115px] rounded-lg px-2 py-2 bg-slate-500 overflow-auto flex gap-4 flex-col '
               key={item.id}
             >
               <div className='flex justify-between'>
@@ -51,13 +51,14 @@ const CompletedTaskDisplay = () => {
                       )
                     }
                   />
-                  <label>Mark as completed</label>
+                  <label>Completed</label>
                 </div>
                 <button
                   type='button'
                   onClick={() => {
                     handleDelete(item.id);
                   }}
+                  className='text-red-800 font-semibold'
                 >
                   <AiOutlineClose />
                 </button>
