@@ -5,6 +5,8 @@ import { selectTheme } from '../../slice/ThemeSlice';
 
 import desktopDark from '../../assets/desktopDark.jpg';
 import desktopLight from '../../assets/deskopLight.jpg';
+import mobileDark from '../../assets/mobileDark.jpg';
+import mobileLight from '../../assets/mobileLight.jpg';
 
 import InputForm from '../inputForm/InputForm';
 
@@ -18,11 +20,34 @@ const Nav = () => {
 
   return (
     <div className='relative'>
-      <div className=''>
+      <div className='sm:hidden lg:block'>
         {!theme ? (
-          <img className='rounded-lg' src={desktopLight} alt='dark theme' />
+          <img
+            className='rounded-lg sm:hidden lg:block'
+            src={desktopLight}
+            alt='dark theme'
+          />
         ) : (
-          <img className='rounded-lg' src={desktopDark} alt='dark theme' />
+          <img
+            className='rounded-lg sm:hidden lg:block'
+            src={desktopDark}
+            alt='dark theme'
+          />
+        )}
+      </div>
+      <div className='lg:hidden sm:block'>
+        {!theme ? (
+          <img
+            className='rounded-lg lg:hidden sm:block'
+            src={mobileLight}
+            alt='dark theme'
+          />
+        ) : (
+          <img
+            className='rounded-lg lg:hidden sm:block'
+            src={mobileDark}
+            alt='dark theme'
+          />
         )}
       </div>
       <div className='flex justify-around absolute w-full top-16 '>
