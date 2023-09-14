@@ -19,7 +19,6 @@ const CompletedTaskDisplay = () => {
     });
     setCompletedTask(filteredData);
   }, [todos]);
-  console.log(completedTask);
 
   const handleDelete = (id: number) => {
     dispatch(deleteTodo(id));
@@ -51,7 +50,7 @@ const CompletedTaskDisplay = () => {
                       )
                     }
                   />
-                  <label>Completed</label>
+                  <label className='font-serif'>Completed</label>
                 </div>
                 <button
                   type='button'
@@ -64,7 +63,7 @@ const CompletedTaskDisplay = () => {
                 </button>
               </div>
               <div>
-                <p className=' flex flex-wrap font-semibold text-red-100 '>
+                <p className=' flex flex-wrap font-semibold text-red-100 font-serif'>
                   {item.dailyTodo}
                 </p>
               </div>

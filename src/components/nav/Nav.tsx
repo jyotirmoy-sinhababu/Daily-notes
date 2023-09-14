@@ -52,7 +52,9 @@ const Nav = () => {
       </div>
       <div className='flex justify-around absolute w-full top-16 '>
         {' '}
-        <h2 className='font-black text-stone-200 text-2xl'>TODO APP</h2>
+        <h2 className='font-black text-stone-200 text-2xl font-serif'>
+          TODO APP
+        </h2>
         <button
           onClick={() => {
             changeTheme();

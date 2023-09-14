@@ -12,7 +12,7 @@ const ErrorPage = () => {
     <div className='flex pt-[40px] justify-center align-middle'>
       <p
         style={textTheme.textColor}
-        className='font-black decoration-slate-950 text-3xl'
+        className='font-black decoration-slate-950 text-3xl font-serif'
       >
         No items
       </p>

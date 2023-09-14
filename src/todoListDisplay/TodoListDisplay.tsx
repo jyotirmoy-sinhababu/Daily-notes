@@ -31,7 +31,7 @@ const TodoListDisplay = () => {
           return (
             <div
               style={cardTheme.backGroundColor}
-              className='border-4 w-[320px] h-[115px] rounded-lg px-2 py-2  overflow-auto flex gap-2 flex-col '
+              className='border-4 w-[320px] h-[115px] rounded-lg px-2 py-2  overflow-auto flex gap-2 flex-col  '
               key={item.id}
             >
               <div className='flex justify-between'>
@@ -51,7 +51,9 @@ const TodoListDisplay = () => {
                       )
                     }
                   />
-                  <label style={cardTheme.textColor}>Completed</label>
+                  <label className='font-serif' style={cardTheme.textColor}>
+                    Completed
+                  </label>
                 </div>
                 <button
                   type='button'
@@ -66,7 +68,7 @@ const TodoListDisplay = () => {
               <div>
                 <p
                   style={cardTheme.textColor}
-                  className=' flex flex-wrap font-semibold text-red-100  '
+                  className=' flex flex-wrap font-semibold text-red-100 font-serif  '
                 >
                   {item.dailyTodo}
                 </p>

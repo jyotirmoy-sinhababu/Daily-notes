@@ -38,7 +38,7 @@ const InputForm = () => {
       <input
         type='text'
         name='dailyTodo'
-        className='lg:w-[580px] md:w-[450px] md:h-10 lg:h-12 rounded-lg pl-4 h-8 w-[210px] '
+        className='lg:w-[580px] md:w-[450px] md:h-10 lg:h-12 rounded-lg pl-4 h-8 w-[210px] font-serif text-[19px] '
         placeholder='Create a new todo...'
         onChange={(e) => {
           setInputData({ ...inputData, [e.target.name]: e.target.value });
