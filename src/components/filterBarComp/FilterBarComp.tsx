@@ -1,4 +1,14 @@
+import { useSelector } from 'react-redux';
+
 const FilterBarComp = ({ togglePage, setTogglePage }: any) => {
+  const theme = useSelector((state: any) => state?.theme.value);
+
+  const btnTheme = {
+    btnColor: {
+      color: theme ? 'aliceblue' : 'hsl(207, 26%, 17%)',
+    },
+  };
+
   const activeBtnStyle: any = {
     active: {
       borderBottom: togglePage ? '2px solid grey' : null,
@@ -11,7 +21,7 @@ const FilterBarComp = ({ togglePage, setTogglePage }: any) => {
   return (
     <div className='flex gap-[28px] justify-end pe-[45px] '>
       <button
-        style={activeBtnStyle.active}
+        style={(activeBtnStyle.active, btnTheme.btnColor)}
         className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg'
         onClick={() => {
           setTogglePage(true);
@@ -20,7 +30,7 @@ const FilterBarComp = ({ togglePage, setTogglePage }: any) => {
         All
       </button>
       <button
-        style={activeBtnStyle.inActive}
+        style={(activeBtnStyle.inActive, btnTheme.btnColor)}
         className='decoration-slate-950 text-2xl border-l-4 border-r-4 rounded-lg'
         onClick={() => {
           setTogglePage(false);
