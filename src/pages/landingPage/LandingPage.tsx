@@ -12,7 +12,7 @@ const LandingPage = () => {
 
   const themeColor = {
     dark: {
-      backgroundColor: theme ? ' hsl(235, 19%, 35%)' : 'white',
+      backgroundColor: theme ? ' hsl(207, 26%, 17%)' : 'white',
       height: '100vh',
     },
   };

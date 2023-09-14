@@ -7,10 +7,21 @@ import ErrorPage from '../components/errorPage/ErrorPage';
 
 const TodoListDisplay = () => {
   const todos = useSelector((state: any) => state?.todo.todos);
+  const theme = useSelector((state: any) => state?.theme.value);
+
   const dispatch = useDispatch();
 
   const handleDelete = (id: number) => {
     dispatch(deleteTodo(id));
+  };
+
+  const cardTheme = {
+    backGroundColor: {
+      backgroundColor: theme ? 'aliceblue' : ' hsl(207, 26%, 17%)',
+    },
+    textColor: {
+      color: theme ? 'hsl(207, 26%, 17%)' : 'aliceblue',
+    },
   };
 
   return (
@@ -19,7 +30,8 @@ const TodoListDisplay = () => {
         todos?.map((item: any) => {
           return (
             <div
-              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2 bg-slate-700 overflow-auto '
+              style={cardTheme.backGroundColor}
+              className='border-4 w-[320px] h-[110px] rounded-lg px-2 py-2  overflow-auto '
               key={item.id}
             >
               <div className='flex justify-between'>
@@ -39,7 +51,7 @@ const TodoListDisplay = () => {
                       )
                     }
                   />
-                  <label>Mark as completed</label>
+                  <label style={cardTheme.textColor}>Mark as completed</label>
                 </div>
                 <button
                   type='button'
@@ -51,7 +63,10 @@ const TodoListDisplay = () => {
                 </button>
               </div>
               <div>
-                <p className=' flex flex-wrap font-semibold text-red-100 '>
+                <p
+                  style={cardTheme.textColor}
+                  className=' flex flex-wrap font-semibold '
+                >
                   {item.dailyTodo}
                 </p>
               </div>

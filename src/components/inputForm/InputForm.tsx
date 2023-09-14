@@ -38,13 +38,16 @@ const InputForm = () => {
       <input
         type='text'
         name='dailyTodo'
-        className='w-[580px] h-12 rounded-lg pl-4'
+        className='lg:w-[580px] md:w-[400px] md:h-10 h-12 rounded-lg pl-4'
         placeholder='Create a new todo...'
         onChange={(e) => {
           setInputData({ ...inputData, [e.target.name]: e.target.value });
         }}
       />
-      <button type='submit' className='flex text-stone-200 text-5xl'>
+      <button
+        type='submit'
+        className='flex text-stone-200 lg:text-5xl md:text-4xl'
+      >
         <BsPencilSquare />
       </button>
     </form>
