@@ -33,12 +33,12 @@ const InputForm = () => {
         e.preventDefault();
         handleTodo();
       }}
-      className='flex justify-center'
+      className='flex justify-center align-middle'
     >
       <input
         type='text'
         name='dailyTodo'
-        className='lg:w-[580px] md:w-[400px] md:h-10 lg:h-12 rounded-lg pl-4'
+        className='lg:w-[580px] md:w-[450px] md:h-10 lg:h-12 rounded-lg pl-4 h-8 w-[210px] '
         placeholder='Create a new todo...'
         onChange={(e) => {
           setInputData({ ...inputData, [e.target.name]: e.target.value });
@@ -46,7 +46,7 @@ const InputForm = () => {
       />
       <button
         type='submit'
-        className='flex text-stone-200 lg:text-5xl md:text-4xl'
+        className='flex text-stone-200 lg:text-5xl md:text-4xl text-[25px]'
       >
         <BsPencilSquare />
       </button>

@@ -20,31 +20,31 @@ const Nav = () => {
 
   return (
     <div className='relative'>
-      <div className='sm:hidden lg:block'>
+      <div className='hidden  md:block'>
         {!theme ? (
           <img
-            className='rounded-lg sm:hidden lg:block'
+            className='rounded-lg hidden md:block md:shrink-0'
             src={desktopLight}
             alt='dark theme'
           />
         ) : (
           <img
-            className='rounded-lg sm:hidden lg:block'
+            className='rounded-lg hidden md:block md:shrink-0'
             src={desktopDark}
             alt='dark theme'
           />
         )}
       </div>
-      <div className='lg:hidden sm:block'>
+      <div className='md:hidden block'>
         {!theme ? (
           <img
-            className='rounded-lg lg:hidden sm:block'
+            className='rounded-lg w-[400px] md:hidden block'
             src={mobileLight}
             alt='dark theme'
           />
         ) : (
           <img
-            className='rounded-lg lg:hidden sm:block'
+            className='rounded-lg w-[400px] md:hidden block'
             src={mobileDark}
             alt='dark theme'
           />
@@ -62,7 +62,7 @@ const Nav = () => {
           {!theme ? <BsMoonStars /> : <BsSun />}
         </button>
       </div>
-      <div className='absolute w-full top-40'>
+      <div className='absolute w-full lg:top-40  top-32'>
         <InputForm />
       </div>
     </div>
